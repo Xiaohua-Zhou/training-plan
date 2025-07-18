@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<title>AIGC 应用师资研修课程方案</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+/* ---------- 设计变量 ---------- */
+:root{
+  --c-bg:#f6f8fa;
+  --c-card:#ffffff;
+  --c-primary:#0066ff;
+  --c-secondary:#00b4aa;
+  --c-text:#1e1e27;
+  --c-muted:#5f6d7a;
+  --c-border:#e1e7f0;
+  --c-shadow:0 2px 8px rgba(0,102,255,.08);
+  --radius:12px;
+  --trans:.3s ease;
+}
+[data-theme="dark"]{
+  --c-bg:#0e1116;
+  --c-card:#1a1f29;
+  --c-primary:#4fa8ff;
+  --c-secondary:#00d9cc;
+  --c-text:#e7e9f0;
+  --c-muted:#a0a9b9;
+  --c-border:#2b3240;
+  --c-shadow:0 2px 8px rgba(0,0,0,.4);
+}
+
+/* ---------- 通用 ---------- */
+*{box-sizing:border-box;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+body{margin:0;background:var(--c-bg);color:var(--c-text);line-height:1.7}
+h1,h2,h3{font-weight:600;margin:0 0 .6em}
+p{margin:.4em 0 .8em}
+ul{margin:.4em 0 1em;padding-left:1.4em}
+li{margin:.25em 0}
+
+/* ---------- 头部 ---------- */
+header{background:linear-gradient(135deg,var(--c-primary),var(--c-secondary));color:#fff;padding:2.5rem 1rem 2rem;text-align:center}
+header h1{font-size:1.8rem;letter-spacing:.5px}
+header small{display:block;margin-top:.5rem;opacity:.9;font-size:.9rem}
+
+/* ---------- 导航 ---------- */
+nav{position:sticky;top:0;background:var(--c-card);box-shadow:var(--c-shadow);z-index:10;padding:.75rem 1rem}
+nav ul{display:flex;gap:.8rem;list-style:none;margin:0;padding:0;overflow:auto}
+nav a{color:var(--c-primary);font-weight:500;font-size:.9rem;text-decoration:none;white-space:nowrap;padding:.25rem .5rem;border-radius:var(--radius);transition:var(--trans)}
+nav a:hover{background:rgba(0,102,255,.1)}
+
+/* ---------- 内容区块 ---------- */
+section{max-width:1100px;margin:2.5rem auto;padding:0 1rem}
+section h2{font-size:1.45rem;color:var(--c-primary);border-bottom:2px solid var(--c-border);padding-bottom:.35em;margin-top:2.5rem;margin-bottom:.8rem;cursor:pointer}
+.card{background:var(--c-card);border-radius:var(--radius);box-shadow:var(--c-shadow);padding:1.5rem 1.25rem;margin-bottom:1.5rem}
+details{margin-bottom:.75rem}
+summary{outline:none;cursor:pointer;font-weight:600;color:var(--c-primary);transition:var(--trans)}
+details[open] summary{margin-bottom:.5em}
+
+/* ---------- 表格 ---------- */
+.table-wrapper{overflow:auto;border-radius:var(--radius);box-shadow:var(--c-shadow);background:var(--c-card)}
+table{border-collapse:collapse;min-width:760px;width:100%}
+thead th{position:sticky;top:0;background:linear-gradient(135deg,var(--c-primary),var(--c-secondary));color:#fff;font-weight:600;z-index:1;white-space:nowrap}
+th,td{padding:.75rem .6rem;border:1px solid var(--c-border);font-size:.9rem;vertical-align:top;line-height:1.5}
+tbody tr:nth-child(even){background:rgba(0,102,255,.03)}
+@media(max-width:768px){
+  table{min-width:680px}
+  th,td{padding:.55rem .5rem;font-size:.85rem}
+}
+
+/* ---------- 按钮 ---------- */
+.toggle-dark{position:fixed;top:1rem;right:1rem;background:var(--c-card);border:none;border-radius:50%;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;color:var(--c-primary);cursor:pointer;box-shadow:var(--c-shadow);transition:var(--trans);z-index:20}
+.toggle-dark:hover{background:var(--c-primary);color:#fff}
+footer{text-align:center;padding:2rem 1rem;font-size:.8rem;color:var(--c-muted)}
+</style>
+</head>
+<body>
+<!-- 主题切换 -->
+<button class="toggle-dark" title="切换深/浅色" onclick="toggleTheme()">
+  <i class="bi bi-moon-stars-fill"></i>
+</button>
+
+<!-- 头部 -->
+<header>
+  <h1>AIGC 应用师资研修课程方案</h1>
+  <small>讲透专业知识 · 课堂现场实操 · 解锁多元 AI 工具 · 交付实操内容 · 注重拿到结果</small>
+</header>
+
+<!-- 导航 -->
+<nav>
+  <ul>
+    <li><a href="#theme">培训主题</a></li>
+    <li><a href="#tools">必学工具集</a></li>
+    <li><a href="#gain">课程收获</a></li>
+    <li><a href="#highlights">核心亮点</a></li>
+    <li><a href="#value">应用价值</a></li>
+    <li><a href="#tech">主要技术</a></li>
+    <li><a href="#outline">课程设置</a></li>
+  </ul>
+</nav>
+
+<!-- ====================== 1 培训主题 ====================== -->
+<section id="theme">
+  <h2>培训主题</h2>
+  <div class="card">
+    <p>AIGC 应用课程师资培训项目是专为教育工作者设计的，旨在帮助教师们深入掌握人工智能生成内容（AIGC）技术，并将其有效应用于日常教学、跨学科教案设计和科研实践中。本项目包含多个模块，涵盖了从 AIGC 技术的基础入门到高级应用的各个方面，以及如何将这些技术融入日常教学和学生指导中。</p>
+    <p>本项目适合希望提升教学效率、创新教学方法、丰富教学资源的中小学教师。通过研修，教师们将更有效地利用 AIGC 技术，为日常教学工作提供支持，为学生创造更加丰富和个性化的学习体验。</p>
+  </div>
+</section>
+
+<!-- ====================== 2 必学工具集 ====================== -->
+<section id="tools">
+  <h2>AIGC 应用必学工具集</h2>
+  <div class="card">
+    <ul>
+      <li>AI【语言模型】工具箱</li>
+      <li>AI【日常办公】工具箱</li>
+      <li>AI【生成 PPT】工具箱</li>
+      <li>AI【生成图片】工具箱</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ====================== 3 课程收获 ====================== -->
+<section id="gain">
+  <h2>课程收获</h2>
+  <div class="card">
+    <ul>
+      <li>掌握 AI 工具融入日常办公，提升个人生产力；</li>
+      <li>学会使用 AI 文本工具进行需求分析、标题创作、课纲设计等内容生产；</li>
+      <li>熟练运用 AI PPT 设计工具，提升课程材料的制作效率和质量；</li>
+      <li>熟练运用 AI 进行案例设计 & 模型萃取的设计方法；</li>
+      <li>借助 AI 绘画工具进行海报设计和制作，让课件更具吸引力；</li>
+      <li>获取 AI 教学价值创造与效率工具集。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ====================== 4 核心亮点 ====================== -->
+<section id="highlights">
+  <h2>核心亮点</h2>
+  <div class="card">
+    <ul>
+      <li><b>全面覆盖</b>：项目包含多个模块，从 AIGC 技术的基础入门到高级应用，全面覆盖了 AIGC 在教育领域的应用。</li>
+      <li><b>实践导向</b>：每个模块都包含实践应用环节，使教师能够在实际操作中掌握 AIGC 工具的使用。</li>
+      <li><b>个性化学习</b>：项目强调个性化学习，AIGC 工具可以根据每个教师的需求提供定制化的辅助。</li>
+      <li><b>跨学科应用</b>：AIGC 技术的应用不仅限于某一学科，而是跨越多个学科，为教师提供广泛的教学支持。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ====================== 5 应用价值 ====================== -->
+<section id="value">
+  <h2>应用价值</h2>
+  <div class="card">
+    <ul>
+      <li><b>提升教学效率</b>：AIGC 技术能够帮助教师快速生成教案、课件和其他教学资源，节省时间，提高工作效率。</li>
+      <li><b>创新教学方法</b>：通过 AIGC 工具，教师可以设计新颖的教学活动，如跨学科项目学习，激发学生的学习兴趣。</li>
+      <li><b>丰富教学资源</b>：AIGC 技术能够辅助教师生成多样化的教学资源，如 PPT 课件、教学图片、教学演示动画、音乐演示等，丰富教学内容。</li>
+      <li><b>个性化学习体验</b>：AIGC 工具可以根据学生的学习情况提供个性化的学习材料和辅导，满足不同学生的需求。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ====================== 6 主要技术 ====================== -->
+<section id="tech">
+  <h2>主要技术</h2>
+  <div class="card">
+    <details><summary>教学内容自动化生成</summary><p>与传统手工编写教案相比，AIGC 工具能够快速生成高质量的教学内容，提高内容生产的效率和质量。</p></details>
+    <details><summary>教学资源智能化开发</summary><p>AIGC 平台能够根据教师的需求生成个性化的 PPT 课件、教学图片和演示动画，这是传统教育体系中难以实现的。</p></details>
+    <details><summary>学科教学深度支持</summary><p>AIGC 技术能够为教师提供深入的学科教学支持，如实验设计辅助和复杂数据分析，增强教学的深度和广度。</p></details>
+    <details><summary>教育科研能力提升</summary><p>AIGC 工具能够辅助教师进行高效的文献阅读、数据分析和论文写作，提升科研工作的质量和效率。</p></details>
+    <details><summary>教育管理智能化</summary><p>AIGC 技术在教育管理中的应用，如智能体和数据分析工具，能够提高管理的精准性和个性化水平，超越了传统教育体系中的管理方法。</p></details>
+    <details><summary>多媒体教学创新</summary><p>AIGC 多媒体生成平台能够为教师提供创新的多媒体教学资源，如视频、音乐和数字人，增强教学的吸引力和互动性。</p></details>
+    <details><summary>数据分析精准化</summary><p>AIGC 工具能够辅助教师进行精准的数据分析，为教学决策提供有力的数据支持，这是传统教育体系中难以实现的。</p></details>
+  </div>
+</section>
+
+<!-- ====================== 7 课程设置（完整表格） ====================== -->
+<section id="outline">
+  <h2>课程设置</h2>
+  <div class="card">
+    <p>课程总计包含 6 个 90 分钟模块，模块一必修，其余可按学校需求灵活调整。</p>
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th style="min-width:110px">模块</th>
+          <th style="min-width:200px">目标</th>
+          <th style="min-width:340px">主要内容</th>
+          <th style="min-width:200px">应用场景案例（部分）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>模块一：<br/>AIGC 应用入门，<br/>筑基提示词 0-1</b></td>
+          <td>掌握基本的 AIGC 提示词使用方式，学习使用多类文生文平台，辅助完成总结报告、发言稿、评语等内容，助力日常公文写作。</td>
+          <td>
+            1. 大语言模型的基本知识<br/>
+            &nbsp;&nbsp;• 大语言模型的基本工作原理与互动方式<br/>
+            &nbsp;&nbsp;• 大语言模型能够完成的主要工作与在教学过程中的主要应用<br/>
+            2. AIGC 文生文工具提示词写作概述<br/>
+            &nbsp;&nbsp;• 简述自然语言处理技术（NLP）如何帮助教师快速生成教案、批改作业<br/>
+            &nbsp;&nbsp;• 了解如何正确使用提示词框架，如何使用 BROKE 框架或结构化提示词进行有效提问<br/>
+            &nbsp;&nbsp;• 学习大语言模型沟通的八大技巧，分析这些技巧如何提升对话质量<br/>
+            3. 文生文实践应用<br/>
+            &nbsp;&nbsp;• 公文写作：探讨如何使用文生文工具为发言稿、通讯稿等文章进行润色与优化<br/>
+            &nbsp;&nbsp;• 活用八大技巧提升写作质量<br/>
+            &nbsp;&nbsp;• 对比不同提示词、不同工具生成的文字内容，实践提示词优化过程
+          </td>
+          <td>
+            • AI 辅助编写工作计划、教育总结、述职报告等<br/>
+            • AI 辅助编写读书心得、培训心得、工作总结等<br/>
+            • AI 辅助完成演讲稿、听课评课记录、教研计划
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>模块二：<br/>AI 赋能教学设计</b></td>
+          <td>使用 AIGC 文生文工具，学习基本教案生成与改进、教案生成提示语设计与优化技巧、实际案例演示与练习，帮助教师提高教学设计质量。</td>
+          <td>
+            1. AIGC 辅助下的教学变革探究<br/>
+            &nbsp;&nbsp;• 探究大语言模型在教学场景中可以扮演的角色<br/>
+            &nbsp;&nbsp;• 思考如何进行生成式探究学习的教学设计<br/>
+            &nbsp;&nbsp;• 分析生成式探究学习过程中的教师职责<br/>
+            2. 教学设计常用提示语及应用方式<br/>
+            &nbsp;&nbsp;• 分析教学过程的任务导向与问题导向课题<br/>
+            &nbsp;&nbsp;• 理解不同提示词对应的优劣与写法<br/>
+            &nbsp;&nbsp;• 明确提示词设计的常见策略和迭代路径<br/>
+            3. AIGC 工具实践应用<br/>
+            &nbsp;&nbsp;• 大纲编写：在文生文工具中使用简单提示词尝试生成教学大纲<br/>
+            &nbsp;&nbsp;• 提示词迭代优化：分析提示词写法与实际效果，更具迭代路径优化提示词<br/>
+            &nbsp;&nbsp;• 任务拆分细化：根据输出结果拆分指令，学习如何使用更加直接有效的方式与文生文工具进行沟通
+          </td>
+          <td>
+            • AI 快速进行教材要点拆解分析，解读新课标教学需求<br/>
+            • AI 赋能个性化教案设计和大单元教学设计<br/>
+            • AI 辅助设计课堂知识点和现实生活的关联方案<br/>
+            • AI 助力教师快速完成试题设计和作业批改<br/>
+            • AI 赋能学生个性化教学，进行针对性培优辅差
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>模块三：<br/>AI 赋能教学资源生成</b></td>
+          <td>使用多样化 AIGC 平台，学习使用 AI 工具进行 PPT 课件生成、教学图片资源生成、学习手册生成、新课标导向的题目资源生成以及学生评语生成，助力提升教学资源的质量和多样性。</td>
+          <td>
+            1. AIGC 教学资源生成概述<br/>
+            &nbsp;&nbsp;• 理解 AIGC 生成内容与传统教学资源的异同，分析其优劣<br/>
+            &nbsp;&nbsp;• 探究利用 AI 工具生成多样化教学资源的方法<br/>
+            &nbsp;&nbsp;• 分析各类 AI 工具特点以及能够满足的特定教学需求<br/>
+            2. 常用的 AIGC 教学资源生成工具简介<br/>
+            &nbsp;&nbsp;• 学习使用 AI 图片生成平台，了解文生图提示词的写法<br/>
+            &nbsp;&nbsp;• 掌握图生图的基本操作方式与应用场合<br/>
+            &nbsp;&nbsp;• 了解常用的 AI 辅助 PPT 生成工具及如何使用文生文工具辅助生成大纲<br/>
+            3. AIGC 工具实践应用<br/>
+            &nbsp;&nbsp;• 文生图体验：使用 AIGC 文生图工具生成教学内容相关图像素材，体验不同提示词下生成结果的差异<br/>
+            &nbsp;&nbsp;• 提示词迭代：根据不同的提示词模板优化文生图提示词，优化素材质量<br/>
+            &nbsp;&nbsp;• AI 辅助 PPT 生成：通过使用文生文工具快速生成教学 PPT 大纲，使用 PPT 生成工具创建合适的素材模板
+          </td>
+          <td>
+            • AI 赋能编写针对性单元和分层作业设计<br/>
+            • AI 助力多学科情景化命题<br/>
+            • AI 生成多维度试题解析<br/>
+            • AI 辅助生成说课稿、说题稿<br/>
+            • AI 赋能课堂图文素材、PPT 生成制作<br/>
+            • AI 优化课前导入、课堂讨论、课后评价设计方案<br/>
+            • AI 协助生成课堂阅读材料和课后拓展素材<br/>
+            • 利用飞书多维表格快速生成学生评价
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>模块四：<br/>AI 赋能学科科研</b></td>
+          <td>掌握基本的 AIGC 提示词使用方式，了解科研相关 AI 工具和方法，提高文献阅读效率、优化论文写作质量、准确解读数据以及进行课题申报，提高科研工作效率。</td>
+          <td>
+            1. 了解 AIGC 进行辅助科研的主要步骤<br/>
+            &nbsp;&nbsp;• 分析如何使用 AIGC 工具进行文献资料的快速搜集和阅读<br/>
+            &nbsp;&nbsp;• 了解如何使用 AIGC 工具阅读、翻译和归纳多种文献<br/>
+            2. AIGC 辅助的项目申报书、课题论文编写<br/>
+            &nbsp;&nbsp;• 了解申报书的基本结构<br/>
+            &nbsp;&nbsp;• 使用 AIGC 工具辅助进行申报选题<br/>
+            &nbsp;&nbsp;• 使用文生文工具协助项目背景资料收集和分析<br/>
+            &nbsp;&nbsp;• 使用文生文工具支持项目综述和研究方案实现<br/>
+            &nbsp;&nbsp;• 使用文生文工具辅助规划项目成果进度<br/>
+            3. AIGC 辅助的数据图表整理<br/>
+            &nbsp;&nbsp;• 了解如何将数据进行有效可视化<br/>
+            &nbsp;&nbsp;• 使用 AI 工具将数据拆分为有效数据表<br/>
+            &nbsp;&nbsp;• 使用 AI 工具绘制可视化图表，直观进行数据展示<br/>
+            &nbsp;&nbsp;• 使用 AI 进行数据总结归纳，形成有效的总结和预测报告
+          </td>
+          <td>
+            • AI 赋能学生学习成绩分析和教学质量分析<br/>
+            • AI 助力高效搜索<br/>
+            • AI 辅助项目申报书编写设计<br/>
+            • AI 论文从选题到结项全方位编写助手<br/>
+            • AI 赋能数据可视化和数据分析
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>模块五：<br/>AI 赋能多媒体创新</b></td>
+          <td>了解各类 AIGC 多媒体生成平台，通过文生视频、文生音乐、AI 数字人等新技术丰富课程教学体验，帮助教师提升课堂吸引力。</td>
+          <td>
+            1. AIGC 多媒体资源生成概述<br/>
+            &nbsp;&nbsp;• 理解 AI 视频资源生成的多种途径<br/>
+            &nbsp;&nbsp;• 了解 AI 音乐的创作原理<br/>
+            &nbsp;&nbsp;• 分析 AI 数字人的应用场景和教学实践案例<br/>
+            2. 常用的 AIGC 多媒体平台介绍<br/>
+            &nbsp;&nbsp;• 介绍 AI 剪辑、AI 视频生成的主流工具<br/>
+            &nbsp;&nbsp;• 介绍 AI 编曲平台的使用方式<br/>
+            &nbsp;&nbsp;• 分析 AI 数字人的优势和特点<br/>
+            3. AIGC 工具实践应用<br/>
+            &nbsp;&nbsp;• 视频生成：使用 AI 剪辑、AI 视频生成平台创作自己的教学短视频素材片段<br/>
+            &nbsp;&nbsp;• 音乐编曲：使用 AI 音乐生成平台，根据学科主题创作乐器<br/>
+            &nbsp;&nbsp;• 数字人体验：使用 AI 数字人平台，创建自己的数字人分身，协助自己完成简单的教学视频录制<br/>
+            &nbsp;&nbsp;• 海报生成：使用 AI 工具一键生成创意海报
+          </td>
+          <td>
+            • AI 快速实现图文情态分析<br/>
+            • AI 个性化教学图片生成<br/>
+            • AI 辅助生成黑板报设计<br/>
+            • AI 助力学生快速获得手抄报创意设计<br/>
+            • AI 赋能班级 / 校园文化多媒体建设和宣传
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>模块六：<br/>AI 智能体搭建应用</b></td>
+          <td>了解智能体的基本配置方式，了解智能体人设的基本写作原理，配置智能体并探索智能体在班级管理、学情分析、个性化辅导等方面的应用场景。</td>
+          <td>
+            1. AIGC 发展中的教育管理变革<br/>
+            &nbsp;&nbsp;• 探索 AIGC 应用逐渐普及背景下的教育评价体系改革与以学生为本的个性化教育推进路径<br/>
+            &nbsp;&nbsp;• 了解 AIGC 技术的局限性与成因<br/>
+            &nbsp;&nbsp;• 简要了解提示词工程技术及其应用方式<br/>
+            2. 智能体基本应用介绍<br/>
+            &nbsp;&nbsp;• 了解增强式生成与常规 AI 生成内容的差异<br/>
+            &nbsp;&nbsp;• 分析智能体的内涵与应用场景<br/>
+            &nbsp;&nbsp;• 了解国内外主流的智能体搭建平台<br/>
+            3. AIGC 工具实践应用<br/>
+            &nbsp;&nbsp;• 智能体搭建入门：通过合理的人设词搭建自己的第一个智能体<br/>
+            &nbsp;&nbsp;• 私有知识库构建：通过合理建立的知识库丰富智能体功能，实现简单的自主问答与查询<br/>
+            &nbsp;&nbsp;• 智能体一键部署应用，生成有效工作内容
+          </td>
+          <td>
+            • AI 实现教学资源统筹<br/>
+            • AI 创建教师数字分身<br/>
+            • AI 辅助实现学生个性化辅导<br/>
+            • AI 助力教师实现全时段的学生陪伴
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>© 2025 MC数字科创中心</footer>
+
+<script>
+/* 主题切换 */
+function toggleTheme(){
+  const root=document.documentElement;
+  const isDark=root.getAttribute('data-theme')==='dark';
+  root.setAttribute('data-theme',isDark?'light':'dark');
+  document.querySelector('.toggle-dark i').className=isDark
+    ?'bi bi-moon-stars-fill'
+    :'bi bi-sun-fill';
+}
+</script>
+</body>
+</html>
